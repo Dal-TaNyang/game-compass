@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>게임 목록 | Game Compass</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">GAME COMPASS</a>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">홈</a>
+      <a href="test.html">취향 테스트</a>
+      <a href="games.html" class="active">게임 목록</a>
+      <a href="favorites.html">즐겨찾기</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-title">
+      <p class="eyebrow">GAME ARCHIVE</p>
+      <h1>게임 목록</h1>
+      <p>Steam 인기작, 장르별 대표작, 인디게임을 포함한 100개 이상의 게임을 제목 검색과 태그 필터로 찾아보세요.</p>
+    </section>
+
+    <section class="toolbar">
+      <input type="text" id="searchInput" placeholder="게임 이름 검색" />
+      <select id="tagFilter">
+        <option value="all">전체 태그</option>
+      </select>
+      <select id="difficultyFilter">
+        <option value="all">전체 난이도</option>
+        <option value="낮음">입문 난이도: 낮음</option>
+        <option value="중간">입문 난이도: 중간</option>
+        <option value="높음">입문 난이도: 높음</option>
+      </select>
+      <button class="btn small" id="randomBtn">랜덤 추천</button>
+      <button class="btn small ghost" id="tagGuideBtn">태그 설명</button>
+      <button class="btn small" id="resetBtn">초기화</button>
+    </section>
+
+    <section class="game-grid" id="gameGrid"></section>
+  </main>
+
+  <div class="modal" id="gameModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="닫기">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Game Compass · Game List</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/games.js"></script>
+</body>
+</html>
