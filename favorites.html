@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>즐겨찾기 | Game Compass</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">GAME COMPASS</a>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">홈</a>
+      <a href="test.html">취향 테스트</a>
+      <a href="games.html">게임 목록</a>
+      <a href="favorites.html" class="active">즐겨찾기</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-title">
+      <p class="eyebrow">FAVORITES</p>
+      <h1>저장한 게임</h1>
+      <p>마음에 드는 게임을 저장하고 다시 확인할 수 있습니다.</p>
+    </section>
+
+    <section class="favorite-toolbar">
+      <button class="btn small danger" id="clearFavoritesBtn">전체 삭제</button>
+    </section>
+
+    <section class="game-grid" id="favoriteGrid"></section>
+  </main>
+
+
+  <div class="modal" id="gameModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="닫기">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Game Compass · Favorites</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/favorites.js"></script>
+</body>
+</html>
